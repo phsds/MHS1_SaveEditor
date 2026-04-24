@@ -7,6 +7,17 @@ from monster import Monster
 
 import os
 
+"""
+To convert this project into exe, first install pyinstaller:
+
+pip install pyinstaller
+
+Then run this command:
+
+pyinstaller --noconsole --onefile --icon=icon.ico main.py
+"""
+
+
 class App(tk.Tk):
     def __init__(self):
         super().__init__()

@@ -14,21 +14,25 @@ Easily edit your inventory, max out your items, and tweak your monsters' attribu
 https://www.monsterhunter.com/stories/ja-jp/  
 
 # Soft
+
 ■ Switch  
 https://store-jp.nintendo.com/list/software/70010000066339.html  
 
 # Execution Requirements
+
 * Python 3.x installed
 * SaveData Backup (extract your saves from the console first)
 * SaveData Restore
 
 # How to Run
+
 Open your terminal in the project directory and run:
 ```bash
 python main.py
 ```
 
 # Steps to Edit
+
 1. **SaveData Backup:** Extract your save data from your console.
 2. Open the save editor using `python main.py`.
 3. Go to **File > Open** and select your save file (usually named 『mhs_slot_x.sav』 where x = 1, 2, 3...).
