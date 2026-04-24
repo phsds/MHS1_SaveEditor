@@ -1,4 +1,4 @@
-![DL Count](https://img.shields.io/github/downloads/turtle-insect/MonsterHunterStories/total.svg)
+![DL Count](https://img.shields.io/github/downloads/phsds/MHS1_SaveEditor/total.svg)
 <p align="center">
   <img src="icon.png" width="200" alt="Rider's SaveForge Icon"/>
 </p>
