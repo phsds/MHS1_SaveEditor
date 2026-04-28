@@ -97,7 +97,7 @@ class App(tk.Tk):
         self._setup_monster_tab()
 
     def _setup_item_tab(self):
-        btn_max = ttk.Button(self.tab_item, text="Maximizar Todos os Itens (999)", command=self.max_all_items)
+        btn_max = ttk.Button(self.tab_item, text="Maximize all Items (999)", command=self.max_all_items)
         btn_max.pack(side=tk.TOP, fill=tk.X, padx=5, pady=5)
         
         # Edit frame at bottom
