@@ -46,18 +46,20 @@ class App(tk.Tk):
         fg_color = "#e0e0e0"
         accent_color = "#ff6b00" 
         dark_blue = "#0f3460"
+
+        segoe_ui = "Segoe UI"
         
         self.configure(bg=bg_color)
         
-        style.configure(".", background=bg_color, foreground=fg_color, font=('Segoe UI', 10))
+        style.configure(".", background=bg_color, foreground=fg_color, font=(segoe_ui, 10))
         
         style.configure("TNotebook", background=bg_color, borderwidth=0)
-        style.configure("TNotebook.Tab", background=dark_blue, foreground=fg_color, padding=[10, 5], font=('Segoe UI', 10, 'bold'), borderwidth=0)
+        style.configure("TNotebook.Tab", background=dark_blue, foreground=fg_color, padding=[10, 5], font=(segoe_ui, 10, 'bold'), borderwidth=0)
         style.map("TNotebook.Tab", background=[("selected", accent_color)], foreground=[("selected", "#ffffff")])
         
         style.configure("TFrame", background=bg_color)
         
-        style.configure("TButton", background=dark_blue, foreground=fg_color, borderwidth=0, padding=5, font=('Segoe UI', 10, 'bold'))
+        style.configure("TButton", background=dark_blue, foreground=fg_color, borderwidth=0, padding=5, font=(segoe_ui, 10, 'bold'))
         style.map("TButton", background=[("active", accent_color)], foreground=[("active", "#ffffff")])
         
         style.configure("TLabel", background=bg_color, foreground=fg_color)
@@ -66,7 +68,7 @@ class App(tk.Tk):
         
         style.configure("Treeview", background=bg_color, fieldbackground=bg_color, foreground=fg_color, borderwidth=0, rowheight=25)
         style.map("Treeview", background=[("selected", accent_color)], foreground=[("selected", "#ffffff")])
-        style.configure("Treeview.Heading", background=dark_blue, foreground=accent_color, font=('Segoe UI', 10, 'bold'), borderwidth=0)
+        style.configure("Treeview.Heading", background=dark_blue, foreground=accent_color, font=(segoe_ui, 10, 'bold'), borderwidth=0)
         
         style.configure("TPanedwindow", background=bg_color)
 
@@ -241,9 +243,8 @@ class App(tk.Tk):
 
     def open_file(self):
         filename = filedialog.askopenfilename()
-        if filename:
-            if SaveData.instance().open(filename):
-                self.initialize_data()
+        if filename and SaveData.instance().open(filename):
+            self.initialize_data()
 
     def save_file(self):
         if SaveData.instance().save():
